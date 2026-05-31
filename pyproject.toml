@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "litres-reqres-diploma"
+version = "0.1.0"
+description = "QA.GURU style diploma project with UI and API autotests"
+authors = ["QA Automation Student"]
+readme = "README.md"
+packages = [{ include = "litres_reqres_diploma" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pytest = "^8.2.0"
+selene = "2.0.0rc9"
+selenium = "^4.21.0"
+requests = "^2.32.3"
+python-dotenv = "^1.0.1"
+allure-pytest = "^2.13.5"
+jsonschema = "^4.22.0"
+curlify = "^2.2.1"
+pydantic = { extras = ["email"], version = "^2.7.4" }
+appium-python-client = "^4.0.0"
+
+[tool.pytest.ini_options]
+addopts = "--alluredir=allure-results --clean-alluredir"
+testpaths = ["tests"]
+markers = [
+    "web: UI tests",
+    "api: API tests",
+    "mobile: Mobile tests",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

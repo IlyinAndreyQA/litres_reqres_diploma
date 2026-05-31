@@ -1,0 +1,10 @@
+pytest==8.2.2
+selene==2.0.0rc9
+selenium==4.21.0
+requests==2.32.3
+python-dotenv==1.0.1
+allure-pytest==2.13.5
+jsonschema==4.22.0
+curlify==2.2.1
+pydantic[email]==2.7.4
+Appium-Python-Client==4.0.0
